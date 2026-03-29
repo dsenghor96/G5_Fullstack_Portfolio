@@ -1,0 +1,15 @@
+{
+  "name": "g5-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de G5 Fullstack",
+  "main": "index.html",
+  "author": "G5 Fullstack",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
