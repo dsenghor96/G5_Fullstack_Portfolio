@@ -5,11 +5,18 @@ Migration du projet HTML/CSS vers **Tailwind CSS v4**.
 ## Structure du projet
 
 ```
-/
+G5_Fullstack_Portfolio/
 ├── public/
 │   └── img/               ← images (logo, projets)
 ├── src/
 │   └── input.css          ← @import "tailwindcss" + @theme
+├── public/
+│   ├── images/
+│       ├── image1.png
+│       ├── image2.png
+│       └── image3.png
+|   ├── logos/
+│       ├── logo.jpeg
 ├── html-pages/
 │   ├── ajouter-projet.html
 │   ├── contact.html
