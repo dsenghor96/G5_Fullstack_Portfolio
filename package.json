@@ -1,12 +1,11 @@
 {
   "name": "g5-portfolio",
   "version": "1.0.0",
-  "description": "Portfolio de G5 Fullstack",
-  "main": "index.html",
-  "author": "G5 Fullstack",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
