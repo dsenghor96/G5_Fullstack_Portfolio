@@ -5,11 +5,14 @@
   "main": "index.html",
   "author": "G5 Fullstack",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "vite": "^8.0.3"
   }
 }
