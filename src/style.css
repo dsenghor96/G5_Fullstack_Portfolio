@@ -1,42 +1,5 @@
 @import "tailwindcss";
-
-/*
- * ── Thème personnalisé (Tailwind v4) ────────────────────
- * Fini tailwind.config.js ! Toute la configuration
- * se fait ici via @theme.
- * Ces variables génèrent automatiquement les classes utilitaires :
- *   bg-dark, text-nav, bg-success, hover:bg-primary, etc.
- */
-@theme {
-  /* Palette de couleurs du portfolio */
-  --color-dark: #2c3e50; /* header, footer, titres */
-  --color-nav: #34495e; /* barre de navigation    */
-  --color-success: #2ecc71; /* btn-add                */
-  --color-info: #3498db; /* btn-back               */
-  --color-primary: #57a8f5; /* inputs, btn-submit     */
-  --color-danger: #dc3545; /* btn-delete             */
-  --color-danger-alt: #f44336; /* btn-reset              */
-  --color-blue: #007bff; /* btn-detail             */
-  --color-green-link: #00ff0d; /* hover nav links        */
-  --color-body-bg: #f4f4f4; /* fond de page           */
-  --color-card-bg: #f9f9f9; /* carte projet           */
-
-  /* Typographie */
-  --font-sans: Arial, sans-serif;
-}
-
-/* ── Base ───────────────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Supprime la décoration des liens dans les boutons */
+/* Supprime les décoration des liens dans les boutons */
 .btn-link a {
   color: inherit;
   text-decoration: none;
