@@ -3,95 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liste des projets - Portfolio</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../css-pages/lister-projet.css" />
+    <title>Liste des projets - Portfolio G5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/style.css" />
   </head>
 
-  <body>
-    <header>
-      <img
-        src="../public/logos/logo.jpeg"
-        alt="Logo du Portfolio"
-        class="logo"
-      />
+  <body class="bg-white text-gray-900">
+    <header class="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <a href="../index.html" class="flex items-center gap-2">
+            <span class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold">
+              G5
+            </span>
+            <span class="font-semibold">Portfolio</span>
+          </a>
 
-      <nav class="nav-menu">
-        <a href="#" block="Liste">Liste</a>
-        <a href="../html-pages/ajouter-projet.html">Ajouter</a>
-        <a href="../html-pages/contact.html">Contacts</a>
-      </nav>
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="lister-projet.html" class="text-blue-600 font-semibold">Projets</a>
+            <a href="ajouter-projet.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Ajouter</a>
+            <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</a>
+          </nav>
+
+          <a href="ajouter-projet.html" class="hidden sm:inline-flex px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            Nouveau projet
+          </a>
+        </div>
+      </div>
     </header>
 
     <main>
-      <div class="content">
-        <div class="btn-back-index">
-          <button class="btn-back">
-            <a href="../../index.html">🔙Retour à l'accueil</a>
-          </button>
+      <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-blue-50/40 to-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+              <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">Galerie des realisations</p>
+              <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                Une liste claire de projets, prete a presenter ton portfolio.
+              </h1>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Cette page regroupe les projets de facon lisible avec une interface Tailwind moderne, responsive,
+                et coheree avec la palette couleur de la page d'accueil.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#liste-projets" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                  Voir les projets
+                </a>
+                <a href="ajouter-projet.html" class="px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors text-center">
+                  Ajouter un projet
+                </a>
+              </div>
+            </div>
+
+            <article class="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 space-y-6">
+              <h2 class="text-2xl font-bold text-gray-900">Statistiques rapides</h2>
+              <div class="grid grid-cols-3 gap-4 pt-2 border-t border-gray-200">
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">3</p>
+                  <p class="text-sm text-gray-600">projets</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">100%</p>
+                  <p class="text-sm text-gray-600">responsive</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">1</p>
+                  <p class="text-sm text-gray-600">style commun</p>
+                </div>
+              </div>
+              <a href="../index.html" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                Retour a l'accueil
+              </a>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <h2>Liste des projets</h2>
-        <div class="project-list">
-          <div class="project-item">
-            <div class="project-header">
-              <h2>E-shop</h2>
-              <img
-                src="../public/images/image1.png"
-                alt="Image du projet E-shop"
-              />
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="../html-pages/listes-projets/projet1.html"
-                  >Voir Détails</a
-                >
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-header">
-              <h2>Fetnes Mobile App</h2>
-              <img
-                src="../public/images/image2.jpg"
-                alt="Image du projet Fetnes Mobile App"
-              />
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="../html-pages/listes-projets/projet2.html"
-                  >Voir Détails</a
-                >
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-header">
-              <h2>Dashboard Analytics</h2>
-              <img
-                src="../public/images/image3.jpg"
-                alt="Image du projet Dashboard Analytics"
-              />
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="../html-pages/listes-projets/projet3.html"
-                  >Voir Détails</a
-                >
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
+      <section id="liste-projets" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Liste des projets</h2>
+              <p class="text-gray-600 mt-2">Selection recente de realisations</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 G4 Fullstack Portfolio</p>
+    <footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p class="text-center text-sm text-gray-400">&copy; 2026 G5 Fullstack Portfolio</p>
+      </div>
     </footer>
   </body>
 </html>
