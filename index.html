@@ -6,10 +6,11 @@
     <title>Portfolio G4 Fullstack</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/menu.js" defer></script>
   </head>
   <body class="bg-white text-gray-900">
     <!-- Header -->
-    <header class="border-b border-gray-200 sticky top-0 z-50 bg-white">
+    <header class="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
@@ -56,8 +57,11 @@
               Nouveau projet
             </a>
             <button
+              type="button"
               class="md:hidden p-2 rounded-lg hover:bg-gray-100"
-              aria-label="Menu"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              data-menu-button
             >
               <svg
                 class="w-6 h-6"
@@ -74,6 +78,26 @@
               </svg>
             </button>
           </div>
+        </div>
+        <div class="md:hidden hidden border-t border-gray-200 py-4 space-y-3" data-mobile-menu>
+          <a
+            href="html-pages/lister-projet.html"
+            class="block text-gray-700 hover:text-blue-600 font-medium"
+          >
+            Projets
+          </a>
+          <a
+            href="html-pages/ajouter-projet.html"
+            class="block text-gray-700 hover:text-blue-600 font-medium"
+          >
+            Ajouter
+          </a>
+          <a
+            href="html-pages/contact.html"
+            class="block text-gray-700 hover:text-blue-600 font-medium"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </header>
