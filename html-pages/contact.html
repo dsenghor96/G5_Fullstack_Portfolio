@@ -49,27 +49,95 @@
     </header>
 
     <main class="flex-1">
-      <div class="content">
-        <div>
-          <button class="btn-back"><a href="../index.html">Retour a l'accueil</a></button>
-        </div>
-        <h2>Contactez-nous</h2>
-        <form id="contactForm">
-          <label for="name">Nom:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <div class="btn-sub-res">
-            <button type="submit">Envoyer</button>
-            <button type="reset">Reinitialiser</button>
+      <section class="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.18),_transparent_30%),linear-gradient(180deg,_#f8fbff_0%,_#ffffff_45%,_#eef6ff_100%)] py-16 sm:py-20">
+        <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-r from-blue-100/50 via-cyan-100/40 to-transparent"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl space-y-4">
+              <span class="inline-flex rounded-full border border-blue-200 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm">
+                Restons en contact
+              </span>
+              <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                Une page contact claire, elegante et prete a presenter le projet.
+              </h1>
+              <p class="text-lg leading-8 text-slate-600">
+                Utilisez ce formulaire pour nous envoyer un message, proposer une collaboration ou poser une question sur le portfolio G5.
+              </p>
+            </div>
+            <a href="../index.html" class="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-500 hover:text-blue-600">
+              Retour a l'accueil
+            </a>
           </div>
-        </form>
-      </div>
+
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.2fr]">
+            <aside class="space-y-6 rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-xl shadow-blue-100/60 backdrop-blur">
+              <div class="space-y-3">
+                <p class="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-700">Infos utiles</p>
+                <h2 class="text-2xl font-bold text-slate-900">Parlons du portfolio</h2>
+                <p class="text-sm leading-7 text-slate-600">
+                  Cette page centralise les demandes de contact, de retour sur le design et les propositions autour du projet fullstack.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Email</p>
+                  <p class="mt-2 text-base font-semibold text-slate-900">contact@g5-portfolio.dev</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Disponibilite</p>
+                  <p class="mt-2 text-base font-semibold text-slate-900">Lundi au vendredi</p>
+                  <p class="text-sm text-slate-600">09h00 - 18h00</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Objectif</p>
+                  <p class="mt-2 text-sm leading-7 text-slate-600">
+                    Recevoir des questions, des suggestions et des demandes de demonstration dans une interface plus professionnelle.
+                  </p>
+                </div>
+              </div>
+            </aside>
+
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/70 sm:p-10">
+              <div class="mb-8 space-y-3">
+                <p class="text-sm font-semibold uppercase tracking-[0.28em] text-blue-700">Formulaire</p>
+                <h2 class="text-3xl font-bold text-slate-900">Contactez-nous</h2>
+                <p class="text-sm leading-7 text-slate-600">
+                  Remplissez les champs ci-dessous et nous reviendrons vers vous rapidement.
+                </p>
+              </div>
+
+              <form id="contactForm" class="space-y-6">
+                <div class="grid gap-6 sm:grid-cols-2">
+                  <div class="sm:col-span-1">
+                    <label for="name" class="mb-2 block text-sm font-semibold text-slate-700">Nom complet</label>
+                    <input type="text" id="name" name="name" required class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100" />
+                  </div>
+
+                  <div class="sm:col-span-1">
+                    <label for="email" class="mb-2 block text-sm font-semibold text-slate-700">Adresse email</label>
+                    <input type="email" id="email" name="email" required class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="mb-2 block text-sm font-semibold text-slate-700">Votre message</label>
+                  <textarea id="message" name="message" rows="7" required class="w-full rounded-3xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100"></textarea>
+                </div>
+
+                <div class="flex flex-col gap-3 sm:flex-row">
+                  <button type="submit" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5">
+                    Envoyer le message
+                  </button>
+                  <button type="reset" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
+                    Reinitialiser
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="relative overflow-hidden border-t border-slate-800 bg-slate-950 text-slate-300">
