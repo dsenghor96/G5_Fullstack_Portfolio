@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liste des projets - Portfolio</title>
+    <title>Liste des projets - Portfolio G5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../src/style.css" />
     <script src="../src/menu.js" defer></script>
@@ -36,6 +36,7 @@
             </button>
           </div>
         </div>
+
         <div class="hidden space-y-2 border-t border-slate-800 bg-slate-950 pb-5 pt-4 md:hidden" data-mobile-menu>
           <a href="../index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Accueil</a>
           <a href="lister-projet.html" class="block rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">Projets</a>
@@ -46,52 +47,127 @@
     </header>
 
     <main class="flex-1">
-      <div class="content">
-        <div class="btn-back-index">
-          <button class="btn-back">
-            <a href="../index.html">Retour a l'accueil</a>
-          </button>
-        </div>
+      <section class="py-8 md:py-10 bg-gradient-to-br from-gray-50 via-blue-50/40 to-gray-100 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[1.45fr_1fr] gap-6 items-center">
+            <div class="space-y-4">
+              <p class="text-sm font-semibold uppercase tracking-widest text-blue-600">Galerie des realisations</p>
+              <h1 class="text-3xl md:text-4xl font-bold leading-tight text-gray-900 max-w-2xl">
+                Une liste claire de projets, prete a presenter votre portfolio.
+              </h1>
+              <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl">
+                Cette page regroupe les projets de facon lisible avec une interface Tailwind moderne, responsive et coherente avec la page d'accueil.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="#liste-projets" class="px-5 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                  Voir les projets
+                </a>
+                <a href="ajouter-projet.html" class="px-5 py-3 border-2 border-gray-300 text-gray-900 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors text-center">
+                  Ajouter un projet
+                </a>
+              </div>
+            </div>
 
-        <h2>Liste des projets</h2>
-        <div class="project-list">
-          <div class="project-item">
-            <div class="project-header">
-              <h2>E-shop</h2>
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="listes-projets/projet1.html">Voir Details</a>
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-header">
-              <h2>Fetnes Mobile App</h2>
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="listes-projets/projet2.html">Voir Details</a>
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-header">
-              <h2>Dashboard Analytics</h2>
-            </div>
-            <div class="btn-dd">
-              <button class="btn-detail">
-                <a href="listes-projets/projet3.html">Voir Details</a>
-              </button>
-              <button class="btn-delete"><a href="#">Supprimer</a></button>
-            </div>
+            <article class="bg-white rounded-2xl border border-gray-200 shadow-lg p-5 space-y-3 h-fit">
+              <h2 class="text-2xl font-bold text-gray-900">Statistiques rapides</h2>
+              <div class="grid grid-cols-3 gap-4 pt-2 border-t border-gray-200">
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">3</p>
+                  <p class="text-sm text-gray-600">projets</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">100%</p>
+                  <p class="text-sm text-gray-600">responsive</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold text-gray-900">1</p>
+                  <p class="text-sm text-gray-600">style commun</p>
+                </div>
+              </div>
+              <a href="../index.html" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                Retour a l'accueil
+              </a>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section id="liste-projets" class="py-8 md:py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Liste des projets</h2>
+              <p class="text-gray-600 mt-1">Selection recente de realisations</p>
+            </div>
+            <a href="ajouter-projet.html" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors">
+              Ajouter un projet
+            </a>
+          </div>
+
+          <div class="mb-5 p-4 rounded-xl border border-gray-200 bg-gray-50 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">Tout</span>
+              <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-semibold">Disponible</span>
+              <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-sm font-semibold">Prototype</span>
+              <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">Projet cle</span>
+            </div>
+            <p class="text-sm text-gray-600">3 projets affiches</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <article class="group bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div class="p-5 space-y-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">HTML · CSS · JavaScript</p>
+                  <h3 class="text-xl font-bold text-gray-900">E-shop</h3>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">Une vitrine moderne avec catalogue, panier et navigation rapide.</p>
+                <div class="flex items-center justify-between pt-3 border-t border-gray-200 gap-3">
+                  <span class="text-xs font-semibold px-3 py-1 rounded-full bg-green-100 text-green-700">Disponible</span>
+                  <div class="flex items-center gap-2">
+                    <a href="listes-projets/projet1.html" class="px-3 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">Voir</a>
+                    <button type="button" class="px-3 py-2 rounded-lg border border-red-200 bg-red-50 text-red-700 text-sm font-semibold hover:bg-red-100 transition-colors">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="group bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div class="p-5 space-y-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wide text-purple-600 mb-2">API · JavaScript · UI</p>
+                  <h3 class="text-xl font-bold text-gray-900">Fitness Mobile App</h3>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">Une interface legere pour consulter les activites et tendances hebdomadaires.</p>
+                <div class="flex items-center justify-between pt-3 border-t border-gray-200 gap-3">
+                  <span class="text-xs font-semibold px-3 py-1 rounded-full bg-yellow-100 text-yellow-700">Prototype</span>
+                  <div class="flex items-center gap-2">
+                    <a href="listes-projets/projet2.html" class="px-3 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">Voir</a>
+                    <button type="button" class="px-3 py-2 rounded-lg border border-red-200 bg-red-50 text-red-700 text-sm font-semibold hover:bg-red-100 transition-colors">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="group bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div class="p-5 space-y-3">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wide text-orange-600 mb-2">Node.js · Express · MongoDB</p>
+                  <h3 class="text-xl font-bold text-gray-900">Dashboard Analytics</h3>
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed">Un espace de suivi pour centraliser les taches et indicateurs importants.</p>
+                <div class="flex items-center justify-between pt-3 border-t border-gray-200 gap-3">
+                  <span class="text-xs font-semibold px-3 py-1 rounded-full bg-orange-100 text-orange-700">Projet cle</span>
+                  <div class="flex items-center gap-2">
+                    <a href="listes-projets/projet3.html" class="px-3 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors">Voir</a>
+                    <button type="button" class="px-3 py-2 rounded-lg border border-red-200 bg-red-50 text-red-700 text-sm font-semibold hover:bg-red-100 transition-colors">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="relative overflow-hidden border-t border-slate-800 bg-slate-950 text-slate-300">
