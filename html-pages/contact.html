@@ -1,52 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creation du formulaire de contact</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/style.css" />
+    <script src="../src/menu.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Création du formulaire de contact </title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css-pages/contact.css" />
-  <link rel="stylesheet" href="../css-pages/form.css" />
+  <body class="min-h-screen bg-white text-gray-900 flex flex-col">
+    <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between gap-4">
+          <a href="../index.html" class="flex items-center gap-3 rounded-full pr-2 transition hover:opacity-90">
+            <img src="../images/logo.jpeg" alt="Logo G5 Portfolio" class="h-12 w-12 rounded-2xl object-cover ring-2 ring-blue-100" />
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600">G5</p>
+              <p class="text-sm font-semibold text-slate-900">Fullstack Portfolio</p>
+            </div>
+          </a>
 
-</head>
+          <nav class="hidden items-center gap-2 rounded-full border border-slate-800 bg-slate-950 p-2 md:flex" aria-label="Navigation principale">
+            <a href="../index.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Accueil</a>
+            <a href="lister-projet.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Projets</a>
+            <a href="ajouter-projet.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Ajouter</a>
+            <a href="contact.html" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm">Contact</a>
+          </nav>
 
-<body>
-  <header>
-    <img src="listes-projets/img/logo.jpeg" alt="Logo du Portfolio" class="logo" href="../index.html"/>
-    <nav class="nav-menu">
-      <a href="lister-projet.html">Liste</a>
-      <a href="ajouter-projet.html">Ajouter</a>
-      <a href="#" block="contact">Contacts</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="content">
-      <div>
-        <button class="btn-back"><a href="../index.html">🔙Retour à l'accueil</a></button>
-      </div>
-      <h2>Contactez-nous</h2>
-      <form id="contactForm">
-        <label for="name">Nom:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <div class="btn-sub-res">
-          <button type="submit">Envoyer</button>
-          <button type="reset">Réinitialiser</button>
+          <div class="flex items-center gap-3">
+            <button type="button" class="rounded-full border border-slate-200 p-2.5 text-slate-700 transition hover:bg-slate-50 md:hidden" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-button>
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </form>
-    </div>
-  </main>
+        <div class="hidden space-y-2 border-t border-slate-800 bg-slate-950 pb-5 pt-4 md:hidden" data-mobile-menu>
+          <a href="../index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Accueil</a>
+          <a href="lister-projet.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Projets</a>
+          <a href="ajouter-projet.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">Ajouter</a>
+          <a href="contact.html" class="block rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">Contact</a>
+        </div>
+      </div>
+    </header>
 
-  <footer>
-    <p>&copy; 2026 G4 Fullstack Portfolio</p>
-  </footer>
+    <main class="flex-1">
+      <section class="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.18),_transparent_30%),linear-gradient(180deg,_#f8fbff_0%,_#ffffff_45%,_#eef6ff_100%)] py-16 sm:py-20">
+        <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-r from-blue-100/50 via-cyan-100/40 to-transparent"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl space-y-4">
+              <span class="inline-flex rounded-full border border-blue-200 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-sm">
+                Restons en contact
+              </span>
+              <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                Une page contact claire, elegante et prete a presenter le projet.
+              </h1>
+              <p class="text-lg leading-8 text-slate-600">
+                Utilisez ce formulaire pour nous envoyer un message, proposer une collaboration ou poser une question sur le portfolio G5.
+              </p>
+            </div>
+            <a href="../index.html" class="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-500 hover:text-blue-600">
+              Retour a l'accueil
+            </a>
+          </div>
 
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.2fr]">
+            <aside class="space-y-6 rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-xl shadow-blue-100/60 backdrop-blur">
+              <div class="space-y-3">
+                <p class="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-700">Infos utiles</p>
+                <h2 class="text-2xl font-bold text-slate-900">Parlons du portfolio</h2>
+                <p class="text-sm leading-7 text-slate-600">
+                  Cette page centralise les demandes de contact, de retour sur le design et les propositions autour du projet fullstack.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Email</p>
+                  <p class="mt-2 text-base font-semibold text-slate-900">contact@g5-portfolio.dev</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Disponibilite</p>
+                  <p class="mt-2 text-base font-semibold text-slate-900">Lundi au vendredi</p>
+                  <p class="text-sm text-slate-600">09h00 - 18h00</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Objectif</p>
+                  <p class="mt-2 text-sm leading-7 text-slate-600">
+                    Recevoir des questions, des suggestions et des demandes de demonstration dans une interface plus professionnelle.
+                  </p>
+                </div>
+              </div>
+            </aside>
+
+            <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/70 sm:p-10">
+              <div class="mb-8 space-y-3">
+                <p class="text-sm font-semibold uppercase tracking-[0.28em] text-blue-700">Formulaire</p>
+                <h2 class="text-3xl font-bold text-slate-900">Contactez-nous</h2>
+                <p class="text-sm leading-7 text-slate-600">
+                  Remplissez les champs ci-dessous et nous reviendrons vers vous rapidement.
+                </p>
+              </div>
+
+              <form id="contactForm" class="space-y-6">
+                <div class="grid gap-6 sm:grid-cols-2">
+                  <div class="sm:col-span-1">
+                    <label for="name" class="mb-2 block text-sm font-semibold text-slate-700">Nom complet</label>
+                    <input type="text" id="name" name="name" required class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100" />
+                  </div>
+
+                  <div class="sm:col-span-1">
+                    <label for="email" class="mb-2 block text-sm font-semibold text-slate-700">Adresse email</label>
+                    <input type="email" id="email" name="email" required class="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="mb-2 block text-sm font-semibold text-slate-700">Votre message</label>
+                  <textarea id="message" name="message" rows="7" required class="w-full rounded-3xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100"></textarea>
+                </div>
+
+                <div class="flex flex-col gap-3 sm:flex-row">
+                  <button type="submit" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5">
+                    Envoyer le message
+                  </button>
+                  <button type="reset" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
+                    Reinitialiser
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative overflow-hidden border-t border-slate-800 bg-slate-950 text-slate-300">
+      <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-blue-600/20 via-cyan-500/10 to-transparent"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid gap-12 md:grid-cols-4">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <img src="../images/logo.jpeg" alt="Logo G5 Portfolio" class="h-12 w-12 rounded-2xl object-cover ring-1 ring-white/10" />
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-400">G5</p>
+                <p class="text-base font-semibold text-white">Fullstack Portfolio</p>
+              </div>
+            </div>
+            <p class="text-sm leading-6 text-slate-400">Header et footer communs appliques sans modifier le contenu central des pages.</p>
+          </div>
+          <div class="space-y-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Navigation</p>
+            <nav class="flex flex-col gap-3 text-sm">
+              <a href="../index.html" class="transition hover:text-white">Accueil</a>
+              <a href="lister-projet.html" class="transition hover:text-white">Projets</a>
+              <a href="ajouter-projet.html" class="transition hover:text-white">Ajouter un projet</a>
+              <a href="contact.html" class="transition hover:text-white">Contact</a>
+            </nav>
+          </div>
+          <div class="space-y-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Reseaux</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-800 bg-slate-900 transition hover:border-blue-500 hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.3l.4-3h-2.7V9.1c0-.9.3-1.6 1.7-1.6H16V4.8c-.3 0-.9-.1-1.8-.1-3 0-4.8 1.8-4.8 5.1V11H7v3h2.4v7h4.1Z"/></svg></a>
+              <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-800 bg-slate-900 transition hover:border-pink-500 hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 1.8A2.7 2.7 0 0 0 4.8 7.5v9a2.7 2.7 0 0 0 2.7 2.7h9a2.7 2.7 0 0 0 2.7-2.7v-9a2.7 2.7 0 0 0-2.7-2.7h-9Zm9.45 1.35a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 1.8A2.4 2.4 0 1 0 14.4 12 2.4 2.4 0 0 0 12 9.6Z"/></svg></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-800 bg-slate-900 transition hover:border-cyan-500 hover:text-white"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.38a1.56 1.56 0 0 1 .03 3.12ZM5.4 9.75h3.08V19.5H5.4V9.75Zm5.02 0h2.95v1.33h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.75v5.27h-3.08v-4.67c0-1.11-.02-2.55-1.55-2.55-1.55 0-1.79 1.21-1.79 2.47v4.75h-3.2V9.75Z"/></svg></a>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Contact rapide</p>
+            <p class="text-sm leading-6 text-slate-400">Un design commun propre pour l'ensemble du portfolio.</p>
+            <a href="contact.html" class="inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Ouvrir la page contact</a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+          <p>&copy; 2026 G5 Fullstack Portfolio. Header et footer communs appliques sur toutes les pages.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
